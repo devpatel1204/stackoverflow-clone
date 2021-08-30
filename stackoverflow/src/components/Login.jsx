@@ -1,10 +1,9 @@
 import { Form, Col, Button } from 'react-bootstrap';
-import { FiLogIn } from 'react-icons/fi'
 import { authenticateLogin } from '../services/service.js';
 import { useState , useContext} from 'react';
 import { LoginContext } from '../controller/loginstate.jsx';
 import {useHistory} from 'react-router-dom'
-
+import { SiGnuprivacyguard } from 'react-icons/all';
 
 const loginInitialValues = {
     username: '',
@@ -47,7 +46,7 @@ const Login = () => {
         padding: 30,
         }}>
             <h4 style={{color: '#ffffff', display:'flex', justifyContent: "center", alignItems: "center", marginBottom: 15}}>
-                <FiLogIn style={{color: '#ffffff', fontSize: 20}} className="mr-2"/>
+                <SiGnuprivacyguard style={{color: '#ffffff', fontSize: 20}} className="mr-2"/>
                 Login
             </h4>
             <Form>
@@ -63,7 +62,7 @@ const Login = () => {
                     </Form.Label>
                     <Form.Control onChange={(e) => onValueChange(e) } name="password" value={login.password} type="password" placeholder="Enter Password"/>
                 </Form.Group>
-                <Button size="lg" variant="success" onClick={() => clickHandler()} style={{marginLeft: '40%', marginTop: 20}}>
+                <Button size="lg" variant="outline-light" style={{color:'orange'}} onClick={() => clickHandler()} style={{marginLeft: '40%', marginTop: 20}}>
                     Login
                 </Button>
             </Form>

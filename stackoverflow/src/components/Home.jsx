@@ -51,19 +51,19 @@ const Home = () => {
                         <div></div>:
                         questiondata[0].map((question, index) => (
                             <Col className = "mb-3">
-                                <Card border="success" style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px'}}>
+                                <Card  style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px' , borderBlockColor:'orange'}}>
                                     <Card.Body> 
-                                        <Card.Title><FaRegQuestionCircle className="mb-2"/> {question.title}</Card.Title>
+                                        <Card.Title> {question.title}</Card.Title>
                                         <Card.Text>
-                                            <span style={{color:'#5cb85c'}}>Question: </span>{question.content}
+                                            <span style={{color:'teal', fontWeight:600}}>Question: </span>{question.content}
                                             <br/>
-                                            <span style={{color:'#FFFF00'}}>By: {question.usernameQ}</span>
+                                            <span style={{color:'#fff8dc', fontWeight:600}}>By: {question.usernameQ}</span>
                                         </Card.Text>
                                         <div className="d-flex justify-content-around">
-                                            <Button variant="outline-success" size="sm" id="seeanswer" onClick={() => {setClickdone("seeanswer"); setClickquestionid(question)}}>
+                                            <Button variant="outline-warning" size="sm" id="seeanswer" onClick={() => {setClickdone("seeanswer"); setClickquestionid(question)}}>
                                                 See Answers
                                             </Button>
-                                            <Button variant="success" size="sm" id="addanswer" onClick={() => {setClickdone("addanswer"); setClickquestionid(question)}}>
+                                            <Button variant="secondary"size="sm" id="addanswer" onClick={() => {setClickdone("addanswer"); setClickquestionid(question)}}>
                                                 Add Answer
                                             </Button>
                                             

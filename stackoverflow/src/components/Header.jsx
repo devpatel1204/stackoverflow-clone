@@ -19,7 +19,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar style={{height: 50, background: 'black', marginTop: 0}} sticky="top">
+        <Navbar style={{height: 50, background: 'black', marginTop: 10}} sticky="top">
             <Link to='/' className="mx-auto">
                 <Navbar.Brand>
                     <FaRegQuestionCircle className="mb-1" style={{color: 'white'}}/>
@@ -32,14 +32,14 @@ const Header = () => {
                 <Nav className="ml-auto mx-auto">
                         <Link to='/Signup'>
                             <Nav.Item  className="mr-4">
-                                <Button variant="outline-success">
+                                <Button variant="outline-light" style={{color:'orange'}}>
                                     Signup
                                 </Button>
                             </Nav.Item>
                         </Link>
                         <Link to='/Login'>
-                            <Nav.Item style = {{color: 'white'}}>
-                                <Button variant="success">
+                            <Nav.Item >
+                                <Button  variant="outline-warning">
                                     Login
                                 </Button>
                             </Nav.Item>

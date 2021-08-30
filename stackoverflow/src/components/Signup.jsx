@@ -1,5 +1,5 @@
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import { FiLogIn } from 'react-icons/fi'
+import { SiGnuprivacyguard } from 'react-icons/all';
 import {authenticateSignup} from '../services/service';
 import {useState} from 'react';
 import { useHistory } from 'react-router-dom';
@@ -44,7 +44,7 @@ const Signup = () => {
         padding: 30,
         }} className="col-8">
             <h4 style={{color: '#ffffff', display:'flex', justifyContent: "center", alignItems: "center", marginBottom: 15}}>
-                <FiLogIn style={{color: '#ffffff', fontSize: 30}} className="mr-2"/>
+                <SiGnuprivacyguard style={{color: '#ffffff', fontSize: 30}} className="mr-2"/>
                 SignUp
             </h4>
             <Form>
@@ -64,7 +64,7 @@ const Signup = () => {
                         <Form.Control onChange={(e) => onInputChange(e)} value={signup.password} name="password" type="password" placeholder="Enter Password"/>
                     </Form.Group>
                 </Row>
-                <Button size="lg" variant="success" onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 20}}>
+                <Button size="lg" variant="outline-light" style={{color:'orange'}} onClick={() => clickHandler()} style={{marginLeft: '40%', marginTop: 20}}>
                     SignUp
                 </Button>
             </Form>
