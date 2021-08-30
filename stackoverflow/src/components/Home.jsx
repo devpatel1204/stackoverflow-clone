@@ -1,11 +1,12 @@
 import { Col, Row, Card, Spinner, Button, Container } from 'react-bootstrap';
-import { useEffect, useState, useContext} from 'react';
 import {FaRegQuestionCircle} from 'react-icons/fa';
 import axios from 'axios';
 import { LoginContext } from '../controller/loginstate';
 import AddAnswer from './AddAnswer';
-import SeeAnswer from './SeeAnswer';
 import EditQuestion from './EditQuestion';
+import SeeAnswer from './SeeAnswer';
+import { useEffect, useState, useContext} from 'react';
+
 
 
 const url = 'http://localhost:5000/api';
@@ -53,15 +54,15 @@ const Home = () => {
                             <Col className = "mb-3">
                                 <Card  style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px' , borderBlockColor:'orange'}}>
                                     <Card.Body> 
-                                        <Card.Title> {question.title}</Card.Title>
+                                        <Card.Title><span style={{color:'black', fontWeight: 600}}>Question title :</span> {question.title}</Card.Title>
                                         <Card.Text>
                                             <span style={{color:'teal', fontWeight:600}}>Question: </span>{question.content}
                                             <br/>
-                                            <span style={{color:'#fff8dc', fontWeight:600}}>By: {question.usernameQ}</span>
+                                            <span style={{color:'#fff8dc', fontWeight:600}}>Asked By : {question.usernameQ}</span>
                                         </Card.Text>
                                         <div className="d-flex justify-content-around">
                                             <Button variant="outline-warning" size="sm" id="seeanswer" onClick={() => {setClickdone("seeanswer"); setClickquestionid(question)}}>
-                                                See Answers
+                                                Answers
                                             </Button>
                                             <Button variant="secondary"size="sm" id="addanswer" onClick={() => {setClickdone("addanswer"); setClickquestionid(question)}}>
                                                 Add Answer
@@ -98,8 +99,8 @@ const Home = () => {
                 </div>
             }
                 <div className="d-flex justify-content-center">
-                    <Button variant="success" size="lg" id="addanswer" onClick={() => {setClickdone("false"); questionSaver(); setQuestiondata([])}}>
-                        Back to Home
+                    <Button variant="outline-light" style={{color:'orange'}} size="lg" id="addanswer" onClick={() => {setClickdone("false"); questionSaver(); setQuestiondata([])}}>
+                        Home page
                     </Button>
                 </div>
             </div>

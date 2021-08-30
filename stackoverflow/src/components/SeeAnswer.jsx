@@ -36,13 +36,13 @@ const SeeAnswer = (props) => {
     return (
         <div>
             <Row xs={1} md={1} className="g-4" style={{margin: '3% 3%'}}>
-                <Card border="success" style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px'}}>
+                <Card style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px' , borderBlockColor:'orange'}}>
                     <Card.Body> 
-                        <Card.Title><FaRegQuestionCircle className="mb-2"/> {questiondata.title}</Card.Title>
+                        <Card.Title><span style={{color:'black', fontWeight: 600}}>Question title : </span>{questiondata.title}</Card.Title>
                         <Card.Text>
-                            <span style={{color:'#5cb85c'}}>Question: </span>{questiondata.content}
+                        <span style={{color:'teal', fontWeight:600}}>Question: </span>{questiondata.content}
                             <br/>
-                            <span style={{color:'#FFFF00'}}>By: {questiondata.usernameQ}</span>
+                            <span style={{color:'#fff8dc', fontWeight:600}}>Asked By: {questiondata.usernameQ}</span>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -54,13 +54,14 @@ const SeeAnswer = (props) => {
                         <div></div>:
                         answerdata[0].map((answer, index) => (
                             <Col className = "mb-3">
-                                <Card border="blue" style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px'}}>
+                                <Card style = {{backgroundColor: 'rgba(255,255,255, 0.15)', color: '#ffffff', borderWidth: '2px' , borderBlockColor:'orange'}}>
                                     <Card.Body> 
-                                        <Card.Title><FcIdea className="mb-2"/> Solution: </Card.Title>
+                                        
                                         <Card.Text>
-                                            <span style={{color:'#5cb85c'}}>Answer: </span>{answer.content}
+                                            <span style={{color:'teal', fontWeight:600}}>Answer : </span>{answer.content}
                                             <br/>
-                                            <span style={{color:'#FFFF00'}}>By: {answer.usernameA}</span>
+                                            <br/>
+                                            <span style={{color:'#fff8dc', fontWeight:600}}> solution by : {answer.usernameA}</span>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

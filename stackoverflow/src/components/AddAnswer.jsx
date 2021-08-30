@@ -53,18 +53,18 @@ console.log("---------->",props.question);
         padding: 80,
         }} className="col-8">
             <h4 style={{color: '#ffffff', display:'flex', justifyContent: "center", alignItems: "center", marginBottom: 20}}>
-                Add Answer
+                Add Your Answer Here
             </h4>
             <Form className="my-4">
                 <Row>
                     <Form.Group as={Col}>
                         <Form.Label style={{fontSize: 20, color: '#ffffff'}}>
-                            <span>Content</span>
+                            <span>Your Answer</span>
                         </Form.Label>
                         <Form.Control onChange={(e) => onInputChange(e)} value={answer.content} name="content" as="textarea" placeholder="enter the body of your answer"/>
                     </Form.Group>
                 </Row>
-                <Button size="lg" variant="success" onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 40}}>
+                <Button size="lg" variant="outline-light" onClick={() => clickHandler()} style={{marginLeft: '44%', marginTop: 40}}>
                     Submit
                 </Button>
             </Form>

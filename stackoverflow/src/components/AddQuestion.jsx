@@ -43,7 +43,7 @@ const AddQuestion = () => {
         padding: 80,
         }} className="col-8">
             <h4 style={{color: '#ffffff', display:'flex', justifyContent: "center", alignItems: "center", marginBottom: 20}}>
-                Add Question
+                Add Your Question Here
             </h4>
             <Form className="my-4">
                 <Row>
@@ -62,7 +62,7 @@ const AddQuestion = () => {
                         <Form.Control onChange={(e) => onInputChange(e)} value={question.content} name="content" as="textarea" placeholder="enter the question"/>
                     </Form.Group>
                 </Row>
-                <Button size="lg" variant="success" onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 40}}>
+                <Button size="lg" variant="outline-light" style={{color:'orange'}} onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 40}}>
                     Submit
                 </Button>
             </Form>

@@ -22,9 +22,10 @@ const Header = () => {
         <Navbar style={{height: 50, background: 'black', marginTop: 10}} sticky="top">
             <Link to='/' className="mx-auto">
                 <Navbar.Brand>
-                    <FaRegQuestionCircle className="mb-1" style={{color: 'white'}}/>
+                    
                     <span style={{color:'#ffffff', fontWeight: 600}}>StackOver</span>
                     <span style={{color:'orange', fontWeight: 600}}>Flow</span>
+                    <FaRegQuestionCircle className="mb-1" style={{color: 'white'}}/>
                 </Navbar.Brand>
             </Link>
             {
@@ -49,23 +50,23 @@ const Header = () => {
                 <Nav className="ml-auto mx-auto">
                     <Link to='/add_question'>
                         <Nav.Item  className="mr-4">
-                            <Button variant="outline-success">
-                                Ask Question
+                            <Button variant="outline-light" style={{color:'orange'}}>
+                                Ask Your Question
                             </Button>
                         </Nav.Item>
                     </Link>
                     <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
                             {account}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                         <Link to='/Myprofile'>
-                        <Button style={{color:'black', background:'white', border:'0px'}}>
-                                Myprofile
+                        <Button style={{color:'black', background:'white', borderWidth:'0px'}}>
+                               <p style={{marginLeft:10}}> Myprofile</p>
                             </Button>
                             </Link>
                             <Dropdown.Item onClick={clickHandler}>
-                                <IoMdPower style={{marginRight: 10}}/>
+                                <IoMdPower />
                                 Logout
                             </Dropdown.Item>
                         
