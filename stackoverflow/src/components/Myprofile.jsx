@@ -4,7 +4,7 @@ import {FaRegQuestionCircle} from 'react-icons/fa';
 import axios from 'axios';
 import { LoginContext } from '../controller/loginstate';
 import AddAnswer from './AddAnswer';
-import SeeAnswer from './SeeAnswer';
+import SeeAnswer from './AnswerList';
 import EditQuestion from './EditQuestion';
 const url = 'http://localhost:5000/api';
 

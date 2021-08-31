@@ -4,7 +4,7 @@ import axios from 'axios';
 import { LoginContext } from '../controller/loginstate';
 import AddAnswer from './AddAnswer';
 import EditQuestion from './EditQuestion';
-import SeeAnswer from './SeeAnswer';
+import SeeAnswer from './AnswerList';
 import { useEffect, useState, useContext} from 'react';
 
 
