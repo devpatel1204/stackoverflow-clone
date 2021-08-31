@@ -61,7 +61,7 @@ const Header = () => {
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                         <Link to='/Myprofile'>
-                        <Button style={{color:'black', background:'white', borderWidth:'0px'}}>
+                        <Button style={{color:'black', background:'white', borderWidth:0}}>
                                <p style={{marginLeft:10}}> Myprofile</p>
                             </Button>
                             </Link>

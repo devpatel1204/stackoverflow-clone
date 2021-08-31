@@ -18,9 +18,9 @@ app.use(cors());
 app.use('/api',router);
 
 
-const URL = `mongodb+srv://${username}:${password}@stackoverflow.qnbwu.mongodb.net/stackoverflow?retryWrites=true&w=majority`;
+const URL = `mongodb+srv://dev:dev@stackoverflow.qnbwu.mongodb.net/stackoverflow?retryWrites=true&w=majority`;
 db(URL);
 
 app.listen(5000,() => {
-    console.log('server is up and running on port 5000');
+    console.log('server is up and running on port 8000');
 })

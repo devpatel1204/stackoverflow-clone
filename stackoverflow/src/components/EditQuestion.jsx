@@ -66,7 +66,7 @@ const EditQuestion = (props) => {
                         <Form.Control onChange={(e) => onInputChange(e)} value={question.content} name="content" as="textarea" placeholder="enter the question"/>
                     </Form.Group>
                 </Row>
-                <Button size="lg" variant="success" onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 40}}>
+                <Button size="lg" variant="outline-light" style={{color:'orange'}} onClick={() => clickHandler()} style={{marginLeft: '45%', marginTop: 40}}>
                     Submit
                 </Button>
             </Form>

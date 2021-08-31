@@ -34,6 +34,7 @@ router.post('/addanswer', async (req,res,next) => {
     const exist = await Answer.findOne({ content: req.body.content, questionid: req.body.questionid, usernameA : req.body.usernameA});
     if(exist){
         return res.status(401).json('answer already exist');
+
     } 
     Answer.create(req.body)
     .then(data => res.json(data))

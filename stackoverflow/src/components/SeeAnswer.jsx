@@ -48,7 +48,7 @@ const SeeAnswer = (props) => {
                 </Card>
             </Row>
             {
-                <Row xs={1} md={2} className="g-4" style={{margin: '3% 3%'}}>
+                <Row xs={1} md={1} className="g-4" style={{margin: '3% 3%'}}>
                 {
                     (answerdata[0] === undefined)?
                         <div></div>:
